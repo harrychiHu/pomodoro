@@ -1,6 +1,6 @@
 <template lang="pug">
-v-container.bg1
-  v-container.img456
+v-container.bgS
+  v-container.imgMusic
     v-row#settings
       v-col(cols="12")
         h1.text-center 設定
@@ -21,12 +21,12 @@ v-container.bg1
 </template>
 
 <style>
-  .bg1{
+  .bgS{
     background: #EFE7DA;
     color: #0E4749;
     height: 100vh;
   }
-  .img456{
+  .imgMusic{
     height: 100%;
     background: url("../assets/tomato_3.png") no-repeat 50% -100%;
   }

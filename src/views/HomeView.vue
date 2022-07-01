@@ -1,5 +1,5 @@
 <template lang="pug">
-v-container.text-center.bg#home
+v-container.text-center.bgH#home
   v-row
     v-col.colLeft
       img(src="../assets/tomato.png")
@@ -27,7 +27,7 @@ v-container.text-center.bg#home
 </template>
 
 <style>
-.bg{
+.bgH{
   background: #EFE7DA;
   display: flex;
   justify-content: space-around;

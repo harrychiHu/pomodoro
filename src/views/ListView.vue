@@ -1,6 +1,6 @@
 <template lang="pug">
-v-container.bg
-  v-container.img123
+v-container.bgL
+  v-container.imgList
     v-row#list
       v-col(cols='12')
         h1 待辦事項
@@ -39,12 +39,12 @@ v-container.bg
 </template>
 
 <style>
-  .bg{
+  .bgL{
     background: #EFE7DA;
     color: #0E4749;
     height: 100vh;
   }
-  .img123{
+  .imgList{
     height: 100%;
     background: url("../assets/tomato_2.png") no-repeat 50% -700%;
   }
