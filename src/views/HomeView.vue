@@ -1,9 +1,9 @@
 <template lang="pug">
-v-row.text-center.box1#home
+v-container.text-center.bg#home
   v-row
-    v-col.box2
+    v-col.colLeft
       img(src="../assets/tomato.png")
-      v-col.btn123(cols="12")
+      v-col.btnPlay(cols="12")
         v-btn.mx-16.b-btn(icon color="green" v-if="status !== 1" @click="startTimer")
           img(src='../assets/play.png')
           //- v-icon mdi-play
@@ -13,13 +13,13 @@ v-row.text-center.box1#home
         v-btn.mx-16.b-btn(icon color="red" v-if="current.length > 0" @click="finishTimer(true)")
           img(src='../assets/skip-next.png')
           //- v-icon mdi-skip-next
-    v-col.box3
-      v-col.text123(cols="12")
+    v-col.colRight
+      v-col.tomatoList(cols="12")
         h1 {{ currentText }}
         h1 {{ timeText }}
-      v-col.text789(cols="12")
+      v-col.precautions(cols="12")
         h1 番茄鐘注意事項
-          ul.text246
+          ul.precautionsList
             li 1. 別急著開始計時，先備妥計畫、做好計畫！
             li 2. 番茄鐘不可分割、不可暫停
             li 3. 休息很重要，番茄鐘不要「連走」
@@ -27,12 +27,12 @@ v-row.text-center.box1#home
 </template>
 
 <style>
-.box1{
+.bg{
   background: #EFE7DA;
   display: flex;
   justify-content: space-around;
 }
-.box2{
+.colLeft{
   background: #EFE7DA;
   /* position: absolute;
   top: 10%;
@@ -40,12 +40,12 @@ v-row.text-center.box1#home
   z-index: 1;
     transform: translate(-50%); */
 }
-.box3{
+.colRight{
   background: #EFE7DA;
   position: relative;
 
 }
-.text123{
+.tomatoList{
   color: #0E4749;
   position: absolute;
   top: 30%;
@@ -55,16 +55,7 @@ v-row.text-center.box1#home
   border-radius: 10px
 }
 
-.text456{
-  color: #0E4749;
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  border-radius: 10px
-}
-
-.text789{
+.precautions{
   color: #0E4749;
   position: absolute;
   top: 55%;
@@ -73,18 +64,18 @@ v-row.text-center.box1#home
   border-radius: 10px
 }
 
-.text246{
+.precautionsList{
   text-align: left;
   font-size: 2rem;
   list-style: none;
 }
 
-.text246 li{
+.precautionsList li{
   margin: 2rem 0;
   border-bottom: 5px solid white;
 }
 
-.btn123{
+.btnPlay{
   position: absolute;
   top: 65%;
   left: 30%;
