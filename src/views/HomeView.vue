@@ -28,7 +28,7 @@ v-row.text-center.box1#home
 
 <style>
 .box1{
-  background: red;
+  background: #EFE7DA;
   display: flex;
   justify-content: space-around;
 }
